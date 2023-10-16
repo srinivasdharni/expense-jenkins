@@ -14,6 +14,7 @@
         user: "{{jenkins_user}}"
       vars:
         repo_name: frontend
+        auto_trigger: "true"
         
     - name: create jenkins jobs backend
       community.general.jenkins_job:
@@ -24,6 +25,7 @@
         user: "{{jenkins_user}}"
       vars:
         repo_name: backend
+        auto_trigger: "true"
         
     - name: create jenkins jobs Expense Parameters
       community.general.jenkins_job:
@@ -34,6 +36,7 @@
         user: "{{jenkins_user}}"
       vars:
         repo_name: parameter-store   
+        auto_trigger: "false"
         
     - name: create jenkins jobs Expense Terraform
       community.general.jenkins_job:
@@ -44,3 +47,4 @@
         user: "{{jenkins_user}}"
       vars:
         repo_name: expense-terraform
+        auto_trigger: "false"
