@@ -49,3 +49,14 @@
         repo_name: expense-terraform
         auto_trigger: "false"
         
+    - name: Create Jenkins Job - Mutable Deployment
+      community.general.jenkins_job:
+        config: "{{ lookup('template', 'job.xml') }}"
+        name: mutable-deployment
+        password: "{{jenkins_password}}"
+        url: http://172.31.87.136:8080
+        user: "{{jenkins_user}}"
+      vars:
+        repo_name: infra-ansible
+        auto_trigger: "false"
+        file_name: Jenkinsfile-Mutable
