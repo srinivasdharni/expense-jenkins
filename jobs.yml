@@ -79,9 +79,9 @@
         config: "{{ lookup('template', 'job.xml') }}"
         name: roboshop-terraform
         password: "{{jenkins_password}}"
-        url: http://172.31.94.64:8080
+        url: http://172.31.87.136:8080
         user: "{{jenkins_user}}"
       vars:
-        repo_name: roboshop-terraform
+        repo_name: roboshopnew-terraform
         auto_trigger: "false"
         file_name: Jenkinsfile
